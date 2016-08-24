@@ -41,7 +41,8 @@
         "./src/app/error/error.ts",
         "./src/app/login/login.ts",
         "./src/app/horizon/horizonservice.ts",
-        "./src/main.ts",                        
+        "./src/main.ts",
+        "./src/app/directives/google/chart.ts",                        
         "./src/polyfills.ts"        
     ]
 }

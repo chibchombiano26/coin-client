@@ -17,11 +17,12 @@ export class HorizonService {
       this.horizon.onReady((status)=> {
         this.status = status;        
         resolve(status);
-
         
-      /*  this.horizon("Tick").watch({rawChanges: true}).subscribe(e => {
-            console.log(e);
-        });*/
+        /* 
+        this.horizon("Tick").watch({rawChanges: true}).subscribe(e => {
+              console.log(e);
+          });
+        */
         
       });      
       this.horizon.connect();            
