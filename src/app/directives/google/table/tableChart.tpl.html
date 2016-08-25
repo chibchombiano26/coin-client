@@ -1,0 +1,20 @@
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Last Price</th>
+      <th>Volumen</th>
+      <th>Change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let item of coins; let i = index" >
+      <th scope="row">{{i}}</th>
+      <td>{{item.currencyPair}}</td>
+      <td>{{item.last}}</td>
+      <td>{{item.quoteVolume}}</td>
+      <td>{{item.percentChange}}</td>
+    </tr>    
+  </tbody>
+</table>

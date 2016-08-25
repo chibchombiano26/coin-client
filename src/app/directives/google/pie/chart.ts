@@ -10,10 +10,7 @@ declare var jQuery: any;
 export class lineChart implements OnInit{
 
     constructor() {        
-        this.createChart();        
-    }
-
-    createChart(){
+         
     }
 
     ngOnInit(): void {

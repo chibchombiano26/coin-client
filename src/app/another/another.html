@@ -1,8 +1,8 @@
-<h1 class="page-title">Another Page <small>Just like that</small></h1>
-
+<h1 class="page-title">Another Page 
+<small>Just like that</small></h1>
 <div class="widget-container">
   <p>Some page content. Feel free to place whatever you want here</p>
-
-  <line-chart></line-chart> 
- 
+  <table-chart [source]="coins" [change]="change"></table-chart>
+  <line-chart></line-chart>
+  <div tables-dynamic [source]="coins" [change]="change"></div>
 </div>

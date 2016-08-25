@@ -42,7 +42,9 @@
         "./src/app/login/login.ts",
         "./src/app/horizon/horizonservice.ts",
         "./src/main.ts",
-        "./src/app/directives/google/chart.ts",                        
+        "./src/app/directives/google/pie/chart.ts",
+        "./src/app/directives/google/table/table.ts",
+        "./src/app/directives/index.ts",                        
         "./src/polyfills.ts"        
     ]
 }

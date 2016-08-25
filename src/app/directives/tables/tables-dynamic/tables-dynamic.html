@@ -1,0 +1,76 @@
+<ol class="breadcrumb">
+  <li>YOU ARE HERE</li>
+  <li class="active">Tables Dynamic</li>
+</ol>
+<h1 class="page-title">Dynamic - <span class="fw-semi-bold">Tables</span></h1>
+
+
+<section class="widget" widget>
+  <header>
+    <h4>The <span class="fw-semi-bold">Angular</span> Way</h4>
+    <div class="widget-controls">
+      <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+      <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+      <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+    </div>
+  </header>
+  <div class="widget-body">
+    <p>
+      Column sorting, live search, pagination. Built with
+      <a href="https://github.com/mariuszfoltak/angular2-datatable" target="_blank">angular2-datatables</a>
+    </p>
+    <div class="mt">
+      <div class="width-200 pull-xs-right">
+          <div class="input-group input-group-sm input-group-transparent input-group-rounded">
+            <span class="input-group-addon">
+              <i class="fa fa-search"></i>
+            </span>
+            <input class="form-control form-control-sm" id="table-search-input" [(ngModel)]="searchText" type="text" placeholder="Search Countries">
+          </div>
+      </div>
+      <table class="table table-striped table-hover" [mfData]="coins" #mf="mfDataTable" [mfRowsOnPage]="10">
+        <thead>
+        <tr>
+          <th>
+            Id
+          </th>
+          <th>
+            <mfDefaultSorter by="currencyPair">Name</mfDefaultSorter>
+          </th>
+          <th class="no-sort hidden-sm-down">
+            <mfDefaultSorter by="last">Price</mfDefaultSorter>
+          </th>
+          <th class="hidden-sm-down">
+            <mfDefaultSorter by="quoteVolume">volumen</mfDefaultSorter>
+          </th>          
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of mf.data | SearchPipe : searchText">
+          <td>{{item.i}}</td>
+          <td><span class="fw-semi-bold">{{item.currencyPair}}</span></td>
+          <td class="hidden-sm-down">
+            <small>
+              <span class="fw-semi-bold">Price:</span>
+              &nbsp; {{item.last}}
+            </small>
+            <br>
+            <small>
+              <span class="fw-semi-bold">Volumen:</span>
+              &nbsp; {{item.quoteVolume}}
+            </small>
+          </td>
+          <td class="hidden-sm-down"><a href="#">{{item.percentChange}}</a></td>          
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td colspan="12">
+            <mfBootstrapPaginator [rowsOnPageSet]="[10, 25, 50, 100]"></mfBootstrapPaginator>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>

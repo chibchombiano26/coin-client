@@ -9,6 +9,13 @@ import 'widgster';
 import 'jquery-touchswipe/jquery.touchSwipe';
 import 'jquery-slimscroll/jquery.slimscroll';
 import 'pace';
+
+import 'backbone';
+import 'backbone.paginator/lib/backbone.paginator.js';
+import 'backgrid/lib/backgrid.js';
+import 'backgrid-paginator/backgrid-paginator.js';
+
+
 import {enableProdMode} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';

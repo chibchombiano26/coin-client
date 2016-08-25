@@ -151,8 +151,10 @@ module.exports = {
       $: 'jquery',
       'window.Tether': 'tether',
       Tether: 'tether',
-      Util: 'bootstrap/dist/js/umd/util.js'
-
+      Util: 'bootstrap/dist/js/umd/util.js',
+	  Backbone: 'backbone',
+      PageableCollection: 'backbone.paginator/lib/backbone.paginator.js',
+	  Backgrid: 'backgrid/lib/backgrid.js'
     }),
     new UglifyJsPlugin({
       // to debug prod builds uncomment //debug lines and comment //prod lines

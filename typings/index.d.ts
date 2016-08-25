@@ -1,6 +1,7 @@
 /// <reference path="globals/es6-shim/index.d.ts" />
 /// <reference path="globals/hammerjs/index.d.ts" />
 /// <reference path="globals/jquery/index.d.ts" />
+/// <reference path="globals/lodash/index.d.ts" />
 /// <reference path="globals/ng2/index.d.ts" />
 /// <reference path="globals/node/index.d.ts" />
 /// <reference path="globals/selenium-webdriver/index.d.ts" />
